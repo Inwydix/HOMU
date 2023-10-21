@@ -1,0 +1,42 @@
+$c[Trick or Treat?]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+$var[nope;<:HOWOSad:1155144446682333185>]
+
+$textSplit[$getServerVar[spookyTot];/]
+$var[totActive;$splitText[1]]
+$var[totUser;$splitText[2]]
+$var[totAsker;$splitText[3]]
+$var[totTimeout;$splitText[4]]
+
+$c[Checks if the command timeouted or not - timeouts command]
+$if[$sum[$var[totTimeout];300]<=$getTimestamp]
+$var[totActive;false]
+$var[totUser;null]
+$var[totAsker;null]
+$endif
+
+$c[Checks if valid user, there is already someone trick or treating]
+$if[$authorID!=481475725598261258]$onlyIf[$and[$isBot[$mentioned[1;yes]]==false;$mentioned[1;no]!=;$mentioned[1;yes]!=$authorID]==true;$var[nope] HOMU needs a valid user to play Trick or Treat with!]$endif
+$onlyIf[$var[totActive]==false;$var[nope] There is already someone playing Trick or Treat in the server! Wait until they are done or the command timeouts]
+$var[emote;$randomText[🦇;🧛;🧟;👽;💀;👻;😈;🎃;🤡;🧙;🤪;😇;🧐;🤖]]
+
+$title[$var[emote] TRICK OR TREAT? $var[emote]]
+$description[<@$mentioned[1;no]>, what's your choice?]
+$color[$randomText[#FFEFC9;#FFE870;#DEB314;#FE9600;#F56F16;#DE4033;#B14624;#6B330D;#B6B160;#5A7E5A;#265C57;#77477E;#602749;#666666]]
+$footer[5 minutes until command timeouts]
+
+$addButton[yes;btTrick;Trick!;secondary;no;$randomText[✨;🔮;💫;🤯;🎭];]
+$if[$and[$getUserVar[spooked;$mentioned[1;no]]!=true;$getUserVar[spookyCandy;$mentioned[1;no]]!=0]]
+$addButton[no;btTreat;Treat!;secondary;no;$randomText[🍬;🍭;🍫];]
+$else
+$addButton[no;btTreat;Treat!;secondary;yes;$randomText[🍬;🍭;🍫];]
+$endif
+
+$var[totActive;true]
+$var[totUser;$mentioned[1;no]]
+$var[totAsker;$authorID]
+$var[totTimeout;$getTimestamp]
+$setServerVar[spookyTot;$var[totActive]/$var[totUser]/$var[totAsker]/$var[totTimeout]]
