@@ -1,0 +1,18 @@
+$c[Flip a coin, with a little twist]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$var[random;$random[1;102]]
+
+$if[$var[random]<=50]
+$var[coin;heads]
+$elseif[$var[random]==51]
+$setUserVar[edgeLordTitle;true]
+$var[coin;edge]
+$else
+$var[coin;tails]
+$endif
+
+🪙 | Flipping a coin...
+$editIn[1s;🪙 | $var[coin]]
