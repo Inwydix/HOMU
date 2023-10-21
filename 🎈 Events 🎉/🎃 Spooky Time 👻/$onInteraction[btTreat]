@@ -1,0 +1,39 @@
+$c[P.O.V. You chose Treat]
+
+$nomention
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+
+$textSplit[$getServerVar[spookyTot];/]
+$var[totActive;$splitText[1]]
+$var[totUser;$splitText[2]]
+$var[totAsker;$splitText[3]]
+$var[totTimeout;$splitText[4]]
+
+$onlyIf[$authorID==$var[totUser];❌ <@$authorID>, you aren't the one supposed to answer!]
+
+$var[ownedCandy;$getUserVar[spookyCandy;$var[totUser]]]
+$var[askerCandy;$getUserVar[spookyCandy;$var[totAsker]]]
+
+$if[$var[ownedCandy]>=10]
+$var[givenCandy;$random[1;11]]
+$elseif[$var[ownedCandy]>=5]
+$var[givenCandy;$random[1;6]]
+$else
+$var[givenCandy;1]
+$endif
+
+$var[ownedCandy;$sub[$var[ownedCandy];$var[givenCandy]]]
+$var[askerCandy;$sum[$var[askerCandy];$var[givenCandy]]]
+
+$setUserVar[spookyCandy;$var[ownedCandy];$var[totUser]]
+$setUserVar[spookyCandy;$var[askerCandy];$var[totAsker]]
+
+$removeButtons
+$title[🍭 TREAT 🍬]
+$description[You gave $var[givenCandy] candy to <@$var[totAsker]> !]
+$footer[You have $var[ownedCandy] left]
+$color[$randomText[#FFEFC9;#FFE870;#DEB314;#FE9600;#F56F16;#DE4033;#B14624;#6B330D;#B6B160;#5A7E5A;#265C57;#77477E;#602749;#666666]]
+
+$var[totActive;false]
+$setServerVar[spookyTot;$var[totActive]/$var[totUser]/$var[totAsker]/$var[totTimeout]]
