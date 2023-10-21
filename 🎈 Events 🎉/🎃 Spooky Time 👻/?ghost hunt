@@ -1,0 +1,17 @@
+$c[Hunt a ghost when one appears on the channel!]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+$onlyIf[$channelID==$getServerVar[ghost];$var[nope] There is no ghost to hunt here!]
+
+$var[random;$random[1;5]]
+
+$if[$var[random]<=2]
+$setUserVar[spookyPoints;$sum[$getUserVar[spookyPoints];200]]
+$setServerVar[ghost;69]
+👻 You caught a ghost! 👻
+$else
+$setServerVar[ghost;69]
+🌬️ The ghost ran away... 🍃
+$endif
