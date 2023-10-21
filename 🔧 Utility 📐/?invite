@@ -1,0 +1,6 @@
+$c[Get the bot invite link]
+
+$nomention $reply
+$onlyIf[$getUserVar[banned]==false;]
+
+[Clicky wicky me UwU](https://discord.com/oauth2/authorize?client_id=1000123818930622546&scope=bot%20applications.commands&permissions=1007021128)
