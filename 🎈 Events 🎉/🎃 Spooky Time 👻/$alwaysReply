@@ -1,0 +1,29 @@
+$c[Get pumpkins or ghosts]
+
+$nomention $suppressErrors
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+
+$c[Random to see what you get, if you get anything]
+$var[random;$modulo[$messageID;100]]
+
+$c[You get jack o lanterns]
+$if[$var[random]<=22]
+$setUserVar[spookyCoins;$sum[$getUserVar[spookyCoins];10]]
+$addCmdReactions[🎃]
+$replyIn[30s]
+$clearReactions[$channelID;$messageID;🎃]
+$elseif[$and[$var[random]>=89;$getServerVar[ghost]!=$channelID]==true]
+$setServerVar[ghost;$channelID]
+$addCmdReactions[👻]
+$replyIn[30s]
+$clearReactions[$channelID;$messageID;👻]
+$endif
+
+$c[You got the objective]
+$if[$and[$getUserVar[spookyPoints]>=5000;$getUserVar[halloween2023done]==false]]
+$setUserVar[halloween2023done;true]
+$title[waw, you completed the Spooky Time objective and got 5k points! You are the spookiest~]
+$description[Now you can use any of the Spooky Time pfps! Use `?settings pfp list` to see the options or `?settings pfp <number>` to change it directly (numbers are from 3 to 5)]
+$color[$randomText[#FFEFC9;#FFE870;#DEB314;#FE9600;#F56F16;#DE4033;#B14624;#6B330D;#B6B160;#5A7E5A;#265C57;#77477E;#602749;#666666]]
+$endif
