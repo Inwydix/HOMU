@@ -1,0 +1,14 @@
+$c[Forbid an user from using the bot in your server]
+
+$nomention $reply $ignoreTriggerCase
+$onlyAdmin[$var[nope] Only admins can use this!]
+$onlyIf[$mentioned[1;no]!=;$var[nope] HOMU needs an user to ban!]
+$onlyIf[$isBot[$mentioned[1;no]]==false;$var[nope] why would you ban a bot, baka?]
+
+$if[$getUserVar[banned;$mentioned[1;no]]==false]
+<@$mentioned[1;no]> was banned from using the bot in this server! :anger:
+$setUserVar[banned;true;$mentioned[1;no]]
+$else
+<@$mentioned[1;no]> was unbanned from using the bot in this server! 
+$setUserVar[banned;false;$mentioned[1;no]]
+$endif
