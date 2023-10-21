@@ -1,0 +1,14 @@
+$c[Haunt someone using HOMU (they will get zombie fox pics in their DMs)]
+
+$nomention $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+$onlyIf[$getUserVar[spookyCoins]>=500;$var[nope] You don't have enough 🎃!]
+$onlyIf[$mentioned[1;no]!=;$var[nope] You have to mention a user for HOMU to haunt!]
+$onlyIf[$mentioned[1;no]!=$authorID;$var[nope] HOMU can't let you haunt yourself!]
+$onlyIf[$isBot[$mentioned[1;no]]==false;$var[nope] HOMU can't haunt a bot!]
+
+$setUserVar[spookyCoins;$sub[$getUserVar[spookyCoins];500]]
+$setUserVar[haunted;$getTimestamp;$mentioned[1;no]]
+
+HOMU will haunt $nickname[$mentioned[1;no]] for an hour! Mwahahahahaha~
