@@ -1,0 +1,23 @@
+$c[Get a reaction pic]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$if[$or[$message[1]==waifu;$message[1]==neko;$message[1]==shinobu;$message[1]==megumin;$message[1]==bully;$message[1]==cuddle;$message[1]==cry;$message[1]==hug;$message[1]==awoo;$message[1]==kiss;$message[1]==lick;$message[1]==pat;$message[1]==smug;$message[1]==bonk;$message[1]==yeet;$message[1]==blush;$message[1]==smile;$message[1]==wave;$message[1]==highfive;$message[1]==handhold;$message[1]==nom;$message[1]==bite;$message[1]==glomp;$message[1]==slap;$message[1]==kill;$message[1]==kick;$message[1]==happy;$message[1]==wink;$message[1]==poke;$message[1]==dance;$message[1]==cringe]==true]
+
+$var[option;$toLowercase[$message[1]]]
+$httpGet[https://api.waifu.pics/sfw/$var[option]]
+$textSplit[$httpResult;"]
+
+$title[$toTitleCase[$var[option]]]
+$image[$splitText[4]]
+$footer[Link: $splitText[4]]
+$color[#$getRoleColor[$highestRole[$mentioned[1;yes]]]]
+
+$if[$mentioned[1;no]!=]
+$description[$randomText[<@$mentioned[1;yes]> $var[option] $var[option] $var[option]! 😄;<@$mentioned[1;yes]>, <@$authorID> sends $var[option]s from the bottom of their heart 🤍;<@$authorID> $var[option]s <@$mentioned[1;yes]> ✨;<@$mentioned[1;yes]>, a $var[option] a day keeps the sadness away! 🥰]]
+$else
+$description[$randomText[<@$authorID> a $var[option] a day keeps the sadness away 🥰;<@$authorID> $var[option] $var[option] $var[option] 😄;<@$authorID> $var[option] 🎉]]
+$endif
+
+$endif
