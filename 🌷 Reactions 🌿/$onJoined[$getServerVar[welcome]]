@@ -1,0 +1,7 @@
+$c[Welcome message! Woohoo~]
+
+$nomention 
+$onlyIf[$getServerVar[welcome]!=0;]
+
+$channelSendMessage[$getServerVar[welcome];
+<@$authorID> $randomText[welcome to ~~hell~~ this beautiful place! 🔥;cookies? What cookies? 🍪;are you ready to have a HOMU-tastic adventure? <:HOMUWink:1155144012366360687>]]
