@@ -1,0 +1,18 @@
+$c[What the bot will answer if you pong it]
+
+$nomention $reply
+$onlyIf[$getUserVar[banned]==false;]
+
+$if[$toLowercase[$noMentionMessage]==u ok?]
+
+$randomText[Yeah;Yep;Yup;Yes;No;Nope;Nop;Nu;Perhaps;Maybe;Mayhaps;Idk]
+
+$elseif[$toLowercase[$noMentionMessage[1]]==hi]
+
+$randomText[Hi;Hello;Hallo;Hewwo], $nickname[$authorID]. How are you today?
+
+$else
+
+$randomText[<:HOLAMad:1155144098303451237>;<:HOLISleep:1155144206365499433>;<:HOMEIWorry:1155144300804448466>;<:HOMIYay:1155144381033095288>;<:HOMUWink:1155144012366360687>;<:HOTAROSparkles:1155144523199029331>;<:HOWOSad:1155144446682333185>]
+
+$endif
