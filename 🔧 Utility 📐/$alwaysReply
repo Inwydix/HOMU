@@ -1,2 +1,4 @@
+$c[This command just counts the number of messages an user sent in the server as they send them]
+
 $nomention 
 $setUserVar[messagesSent;$sum[$getUserVar[messagesSent];1]]
