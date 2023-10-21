@@ -32,11 +32,11 @@ And special thanks for you, who is here right now, reading this! And thanks for 
 Honkai Impact 3rd
 [Julia |Yui Shi| Zhilyaeva](https://yuishi.artstation.com/projects/mqqaW8)
 ## Profile Frames
-HOMU Family edits: Inwydix
-Halloween: [Tangantangen_studio](https://es.pngtree.com/freepng/halloween-frame-border_6933690.html?sol=downref&id=bef)
+[Tangantangen_studio](https://es.pngtree.com/freepng/halloween-frame-border_6933690.html?sol=downref&id=bef) 
+Inwydix
 ## Icons
 Honkai Impact 3rd wiki
-## Card Frame Edits
+## Card Frames
 Inwydix
 ## Pixel HOMU Family
 [Cat Planet](https://jpegurl.tumblr.com/post/673782349326073856/some-small-homu-family-icons-100)
