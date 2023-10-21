@@ -1,3 +1,5 @@
+$c[This command is for checking the bot ping]
+
 $nomention $reply $ignoreTriggerCase
 $onlyIf[$getUserVar[banned]==false;]
 $title[Pong☆($ping ms)]
