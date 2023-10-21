@@ -1,0 +1,27 @@
+$c[Eat candy to get your spooked status removed]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+$var[nope;<:HOWOSad:1155144446682333185>]
+
+$onlyIf[$getUserVar[spookyCandy]>=1;$var[nope] You don't have any candy!]
+
+$var[odds;$random[1;100]]
+
+$setUserVar[spookyCandy;$sub[$getUserVar[spookyCandy];1]]
+
+$title[YOU ATE A CANDY AND...]
+
+$if[$getUserVar[spooked]==true]
+$if[$var[odds]<=40]
+$setUserVar[spooked;false]
+$description[...you got your spooked debuff removed!]
+$else
+$description[...it did nothing]
+$endif
+$else
+$description[...it did nothing, but now your tummy is happy]
+$endif
+
+$color[$randomText[#FFEFC9;#FFE870;#DEB314;#FE9600;#F56F16;#DE4033;#B14624;#6B330D;#B6B160;#5A7E5A;#265C57;#77477E;#602749;#666666]]
