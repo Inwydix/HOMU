@@ -1,4 +1,4 @@
-$c[Build a poll! Either by using the written command version or by using the slash command version]
+de$c[Build a poll! Either by using the written command version or by using the slash command version]
 
 $nomention $allowMention $ignoreTriggerCase 
 $onlyIf[$getUserVar[banned]==false;]
@@ -153,6 +153,7 @@ Some examples you can play with to see how it works:
 
 • `?poll Do you like Halloween? | I love it very much, so I want to know if you to so too!!| https://media.discordapp.net/attachments/872520783686172745/903602903380549652/original-10.jpg | 🎃 | Yes | 😇 | Nope`
 ]
+$thumbnail[$userAvatar[$botID]]
 $color[#ffffff]
 
 $endif
