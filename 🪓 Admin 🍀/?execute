@@ -1,0 +1,9 @@
+$c[Command to execute a piece of BDScript code without a command in the bot]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$var[nope;<:HOWOSad:1155144446682333185>]
+$onlyAdmin[$var[nope] HOMU can't let you use this!]
+
+Eval: $eval[$message]
