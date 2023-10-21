@@ -1,0 +1,21 @@
+$c[Word of the day]
+
+$nomention $reply $ignoreTriggerCase
+$httpGet[https://api.lachiedev.xyz/word-of-the-day]
+
+$title[Word of The Day]
+
+$if[$httpResult[error]!=]
+$description[$httpResult[error]]
+$footer[$year-$month-$day]
+$else
+$description[> Today's Word: $httpResult[word]]
+$addField[Definition:;$httpResult[definition]]
+$addField[Example Sentences:;1. $httpResult[example1]
+2. $httpResult[example2]
+3. $httpResult[example3]]
+$footer[$httpResult[date]]
+$endif
+
+$footerIcon[$userAvatar[$botID]]
+$color[$getRoleColor[$highestRole[$botID]]]
