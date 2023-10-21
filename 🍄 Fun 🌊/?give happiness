@@ -1,0 +1,11 @@
+$c[Give someone happiness. Share happi wen day bad]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$if[$getUserVar[happiness;$mentioned[1;no]]==false]
+<@$mentioned[1;no]> now has happiness! 🤍
+$setUserVar[happiness;true;$mentioned[1;no]]
+$else
+<@$mentioned[1;no]> already have happiness~
+$endif
