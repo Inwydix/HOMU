@@ -1,0 +1,39 @@
+$c[Sacrify an user or thing for the glory of HOMU!]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$var[nope;<:HOWOSad:1155144446682333185>]
+$var[sleep;<:HOLISleep:1155144206365499433>]
+
+$cooldown[1m;$var[sleep] HOMU is cleaning the knife, please, wait a minute | Time left: %time%]
+$setUserVar[sacrify;$sum[$getUserVar[sacrify];1]]
+
+$if[$mentioned[1;no]!=]
+
+$onlyIf[$mentioned[1;no]!=$authorID;$var[nope] Who will praise HOMU if you sacrify yourself?]
+$onlyIf[$mentioned[1;no]!=1155134221342490674;$var[nope] HOMU can't let you sacrify HOMU!]
+$onlyIf[$isBot[$mentioned[1;no]]==false;$var[nope] HOMU can't let you sacrify a bot!]
+
+$try
+$title[🔪 FOR THE GLORY OF HOMU 🩸]
+$description[<@$mentioned[1;no]> was sacrified!]
+$color[#EA2B1F]
+$changeUsername[✞ $nickname[$mentioned[1;no]] ✞]
+$catch
+$title[🔪 FOR THE GLORY OF HOMU 🩸]
+$description[<@$mentioned[1;no]> was sacrified!]
+$color[#EA2B1F]
+$endtry
+
+$elseif[$message!=]
+
+$title[🔪 FOR THE GLORY OF HOMU 🩸]
+$description[$message was sacrified!]
+$color[#EA2B1F]
+
+$else
+
+$var[nope] You must sacrify something for the glory of HOMU
+
+$endif
