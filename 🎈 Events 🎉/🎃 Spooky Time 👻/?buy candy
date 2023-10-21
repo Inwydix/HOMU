@@ -1,0 +1,16 @@
+$c[Buy candy]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+$var[nope;<:HOWOSad:1155144446682333185>]
+
+$onlyIf[$getUserVar[spookyCoins]>=500;$var[nope] You don't have enough 🎃 to buy this!]
+
+$var[bag;$random[5;11]]
+$setUserVar[spookyCandy;$sum[$getUserVar[spookyCandy];$var[bag]]]
+$setUserVar[spookyCoins;$sub[$getUserVar[spookyCoins];500]]
+
+$title[YAY! 😋]
+$description[You bought $var[bag] candy!]
+$color[$randomText[#FFEFC9;#FFE870;#DEB314;#FE9600;#F56F16;#DE4033;#B14624;#6B330D;#B6B160;#5A7E5A;#265C57;#77477E;#602749;#666666]]
