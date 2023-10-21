@@ -1,0 +1,8 @@
+$c[React to a message that starts with "Teri"]
+
+$nomention $ignoreTriggerCase $suppressErrors
+$onlyIf[$getUserVar[banned]==false;]
+$var[teri;$randomText[<:JustTeri:1142887209192665168>;<:TeriBeam:1142887220475330591>;<:TeriCatEyes:1142890993121763520>;<:TeriCute:1142888048028303360>;<:TeriFast:1142887217916817519>;<:TeriDerpMelon:1142892446951424131>;<:TeriNom:1143163835642036334>;<:TeriPist:1143163838569652344>;<:TeriTeeHee:1142887212543905913>;<:TeriWink:1143163843103690762>;<:TeriWow:1143163847721615420>]]
+$addCmdReactions[🇹;🇪;🇷;🇮;$var[teri]]
+$replyIn[30s]
+$clearReactions[$channelID;$messageID;🇹;🇪;🇷;🇮;$var[teri]]
