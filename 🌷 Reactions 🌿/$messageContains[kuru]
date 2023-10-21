@@ -1,0 +1,8 @@
+$c[Kuru kuru~ Kururin!]
+
+$nomention $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$addCmdReactions[<a:KuruKuru:1143173322801168467>]
+$replyIn[30s]
+$clearReactions[$channelID;$messageID;<a:KuruKuru:1143173322801168467>]
