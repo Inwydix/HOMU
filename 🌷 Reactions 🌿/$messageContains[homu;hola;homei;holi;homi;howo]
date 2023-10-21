@@ -1,0 +1,8 @@
+$c[Get a reaction whenever you mention a HOMU family member]
+
+$nomention $ignoreTriggerCase $suppressErrors
+$onlyIf[$getUserVar[banned]==false;]
+$var[reaction;$randomText[<:PixelHOLA:1155142566140989520>;<:PixelHOLI:1155142383986561164>;<:PixelHOMEI:1155142432632078426>;<:PixelHOMU:1155142478509375588>;<:PixelHOWO:1155142684172898464>;<:PixelHOMI:1155142630032822292>]]
+$addCmdReactions[$var[reaction]]
+$replyIn[30s]
+$clearReactions[$channelID;$messageID;$var[reaction]]
