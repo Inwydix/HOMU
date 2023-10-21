@@ -1,0 +1,15 @@
+$c[Activate/deactivate the spooky time commands]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$onlyAdmin[You ain't an admin -.-]
+
+$title[🎃 SPOOKY TIME 👻]
+
+$if[$getServerVar[spookyTime]==true]
+$setServerVar[spookyTime;false]
+$description[Spooky Time commands turned off]
+$else
+$setServerVar[spookyTime;true]
+$description[Spooky Time commands turned on]
+$endif
