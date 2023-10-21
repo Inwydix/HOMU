@@ -1,0 +1,7 @@
+$c[P.O.V. You just mentioned Seele!]
+
+$nomention $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$var[seele;$randomText[<:seele:1012846718112509982>;<:seele2:1012846744729559110>;<:seele3:1012846766879682680>]]
+$addCmdReactions[$var[seele]]
