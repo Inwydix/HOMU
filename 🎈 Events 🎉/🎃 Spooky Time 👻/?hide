@@ -1,0 +1,46 @@
+$c[Hide in one of the designated festive channels]
+
+$nomention $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$textSplit[$getServerVar[festiveChannels];/]
+$var[channel1;$splitText[1]]
+$var[channel2;$splitText[2]]
+$var[channel3;$splitText[3]]
+$var[channel4;$splitText[4]]
+$var[channel5;$splitText[5]]
+
+$onlyIf[$or[$var[channel1]==$channelID;$var[channel2]==$channelID;$var[channel3]==$channelID;$var[channel4]==$channelID;$var[channel5]==$channelID]==true;❌ Woops, you cannot hide here!]
+
+$textSplit[$getServerVar[spookyHide];/]
+$var[hid1;$optOff[$splitText[1]]]
+$var[hid2;$optOff[$splitText[2]]]
+$var[hid3;$optOff[$splitText[3]]]
+$var[hid4;$optOff[$splitText[4]]]
+$var[hid5;$optOff[$splitText[5]]]
+
+$deletecommand
+$deleteIn[1s]
+
+$if[$var[channel1]==$channelID]
+$onlyIf[$var[hid1]==null;❌ There already is someone hiding here]
+$var[hid1;$authorID]
+$setServerVar[spookyHide;$var[hid1]/$var[hid2]/$var[hid3]/$var[hid4]/$var[hid5]]
+$elseif[$var[channel2]==$channelID]
+$onlyIf[$var[hid2]==null;❌ There already is someone hiding here]
+$var[hid2;$authorID]
+$setServerVar[spookyHide;$var[hid1]/$var[hid2]/$var[hid3]/$var[hid4]/$var[hid5]]
+$elseif[$var[channel3]==$channelID]
+$onlyIf[$var[hid3]==null;❌ There already is someone hiding here]
+$var[hid3;$authorID]
+$setServerVar[spookyHide;$var[hid1]/$var[hid2]/$var[hid3]/$var[hid4]/$var[hid5]]
+$elseif[$var[channel4]==$channelID]
+$onlyIf[$var[hid4]==null;❌ There already is someone hiding here]
+$var[hid4;$authorID]
+$setServerVar[spookyHide;$var[hid1]/$var[hid2]/$var[hid3]/$var[hid4]/$var[hid5]]
+$elseif[$var[channel5]==$channelID]
+$onlyIf[$var[hid5]==null;❌ There already is someone hiding here]
+$var[hid5;$authorID]
+$setServerVar[spookyHide;$var[hid1]/$var[hid2]/$var[hid3]/$var[hid4]/$var[hid5]]
+$endif
+
+$randomText[You found a hiding place!;Let's be spooky~;Hide hide hide!!!;Spooky dooby doo~;Have fun being spooky] 😈
