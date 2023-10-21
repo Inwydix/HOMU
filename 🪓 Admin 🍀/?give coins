@@ -1,0 +1,8 @@
+$c[A command to give the chosen amount of coins to the mentioned user (or yourself)]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$onlyAdmin[I refuse]
+
+$setUserVar[coin;$sum[$getUserVar[coin;$mentioned[1;yes]];$message[1]];$mentioned[1;yes]]
+Aye!
