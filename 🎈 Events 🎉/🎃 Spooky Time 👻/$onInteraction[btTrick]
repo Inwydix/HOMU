@@ -1,0 +1,61 @@
+$c[P.O.V. You chose Trick]
+
+$nomention
+$onlyIf[$getUserVar[banned]==false;]
+$onlyIf[$getServerVar[spookyTime]==true;]
+
+$textSplit[$getServerVar[spookyTot];/]
+$var[totActive;$splitText[1]]
+$var[totUser;$splitText[2]]
+$var[totAsker;$splitText[3]]
+$var[totTimeout;$splitText[4]]
+
+$onlyIf[$authorID==$var[totUser];❌ <@$authorID>, you aren't the one supposed to answer!]
+
+$title[🎃 TRICK 👻]
+$color[$randomText[#FFEFC9;#FFE870;#DEB314;#FE9600;#F56F16;#DE4033;#B14624;#6B330D;#B6B160;#5A7E5A;#265C57;#77477E;#602749;#666666]]
+
+$var[random;$random[1;5]]
+$var[points;$optOff[$random[50;200]]]
+$var[money;$optOff[$random[50;200]]]
+
+$setUserVar[spookyPoints;$sub[$getUserVar[spookyPoints];$var[points]]]
+$setUserVar[spookyPoints;$sum[$getUserVar[spookyPoints;$var[totAsker]];$var[points]];$var[totAsker]]
+$setUserVar[spookyCoins;$sum[$getUserVar[spookyCoins];$var[money]]]
+$setUserVar[spookyCoins;$sum[$getUserVar[spookyCoins;$var[totAsker]];$var[money]];$var[totAsker]]
+$setUserVar[spooked;false]
+$var[totActive;false]
+$setServerVar[spookyTot;$var[totActive]/$var[totUser]/$var[totAsker]/$var[totTimeout]]
+
+$if[$var[random]==1]
+
+$var[trick;Trick trick trick!
+You were tricked without mercy!!]
+
+$elseif[$var[random]==2]
+
+$var[trick;You got back home and everything was covered in 🧻 toilet paper 🧻 :0]
+
+$elseif[$var[random]==3]
+
+$var[trick;You found a coin in the street, but it was glued to the floor 💸]
+
+$elseif[$var[random]==4]
+
+$var[trick;<@$var[totAsker]> gets some cards and makes you a magic trick! :magic_wand:]
+
+$endif
+
+$description[$var[trick]
+
+__RESULTS__
+
+<@$var[totUser]>
+> • You lost $var[points] spooky points
+> • You won $var[money] 🎃
+
+<@$var[totAsker]>
+> • You won $var[points] spooky points
+> • You won $var[money] 🎃]
+
+$removeButtons
