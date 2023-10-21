@@ -1,0 +1,4 @@
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$title[Pong☆($ping ms)]
+$color[#F9DF74]
