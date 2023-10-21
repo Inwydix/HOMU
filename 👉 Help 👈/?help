@@ -1,0 +1,57 @@
+$c[A list of all the commands and what each one does]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$title[HOMU Help]
+$description[### ADMIN
+- `?ban <user>` : bans a user from using the bot in a server
+### DAILY
+- `?daily` : claim daily rewards
+### GACHA
+- `?pull` : pull once
+- `?buy key` : buy a key to pull
+- `?buy key <number>` : buy the chosen number of keys
+### CARDS
+- `?team` : see and manage your team
+- `?cards` : see your owned cards
+### ADVENTURE
+- `?adventure` : go fight the evil using your energy
+### FUN
+- `?sacrify <message/user>` : sacrify something or someone
+- `?coin` : flip a coin
+- `?8ball <message>` : ask a question to the HOMU ball
+### OTHER
+- `?ping` : return the bot ping
+- `?invite` : invite the bot to your server
+### SETTINGS
+- `?settings name <text>` : change your nickname (up to 10 words)
+- `?settings pfp list` : show a list of all available pfp pictures
+- `?settings pfp <number>` : change your pfp to the selected one
+- `?settings frame list` : show a list of all available frames
+- `?settings frame <number>` : change your frame to the selected one
+- `?settings theme list` : show a list og all available themes
+- `?settings theme <number>` : change your theme to the selected one
+### HELP
+- `?help` : open HOMU's help
+]
+$if[$getServerVar[spookyTime]==true]
+$title[Spooky Help;2]
+$description[- `?hide` : hide in a festive channel to spook others
+- `?haunt <user>` : make HOMU haunt a user
+- `?tot <user>` : play trick or treat with the chosen user
+- `?spooky stats` : see your spooky stats
+- `?ghost hunt` : try to catch a ghost after seeing one
+;2]
+$color[$randomText[#FFEFC9;#FFE870;#DEB314;#FE9600;#F56F16;#DE4033;#B14624;#6B330D;#B6B160;#5A7E5A;#265C57;#77477E;#602749;#666666];2]
+$endif
+
+$if[$getUserVar[theme]==HOMU]
+$color[#f3b816]
+$elseif[$getUserVar[theme]==HOLI]
+$color[#608dc8]
+$elseif[$getUserVar[theme]==HOMEI]
+$color[#f093a8]
+$elseif[$getUserVar[theme]==HOLA]
+$color[#a81309]
+$endif
