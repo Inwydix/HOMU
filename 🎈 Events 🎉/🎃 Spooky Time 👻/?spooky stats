@@ -1,0 +1,17 @@
+$c[See your spooky time stuffs]
+
+$nomention $ignoreTriggerCase $reply
+$onlyIf[$getUserVar[banned]==false;]
+$textSplit[$getUserVar[pfp;$mentioned[1;yes]];/]
+$var[pfp;$splitText[1]]
+$var[frame;$splitText[2]]
+
+$title[$getUserVar[nickname;$mentioned[1;yes]]'s Spooky Stats]
+$description[$getUserVar[spookyCoins;$mentioned[1;yes]] 🎃
+$getUserVar[spookyPoints;$mentioned[1;yes]] points
+**Bag**
+- $getUserVar[spookyCandy;$mentioned[1;yes]] candy
+$if[$getUserVar[spooked]==true]**Status**
+Spooked $endif]
+$color[$getRoleColor[$highestRole[$mentioned[1;yes]]]]
+$thumbnail[https://ragooffo.sirv.com/pfp/$var[pfp].png?watermark.0.image=%2Fpfp%2Fframes%2F$var[frame].png]
