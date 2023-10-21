@@ -1,0 +1,2 @@
+$nomention 
+$setUserVar[messagesSent;$sum[$getUserVar[messagesSent];1]]
