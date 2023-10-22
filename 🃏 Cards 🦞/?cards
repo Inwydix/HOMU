@@ -1,0 +1,28 @@
+$c[Show your owned cards]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+
+$var[HOMU;<:PixelHOMU:1155142478509375588>]
+$var[HOMEI;<:PixelHOMEI:1155142432632078426>]
+$var[HOLI;<:PixelHOLI:1155142383986561164>]
+$var[HOLA;<:PixelHOLA:1155142566140989520>]
+
+$title[YOUR CARDS]
+$description[Use the select menu below to see your cards]
+
+$if[$getUserVar[theme]==HOMU]
+$color[#f3b816]
+$elseif[$getUserVar[theme]==HOLI]
+$color[#608dc8]
+$elseif[$getUserVar[theme]==HOMEI]
+$color[#f093a8]
+$elseif[$getUserVar[theme]==HOLA]
+$color[#a81309]
+$endif
+
+$newSelectMenu[smCards;1;1;Cards;]
+$addSelectMenuOption[smCards;HI3rd Beginnings - Common Cards;hi31c;Show all the unlocked common cards;no;$var[HOMU];]
+$addSelectMenuOption[smCards;HI3rd Beginnings - Rare Cards;hi31r;Show all the unlocked rare cards;no;$var[HOMEI];]
+$addSelectMenuOption[smCards;HI3rd Beginnings - Ultra Rare Cards;hi31u;Show all the unlocked ultra rare cards;no;$var[HOLI];]
+$addSelectMenuOption[smCards;HI3rd Beginnings - Special Cards;hi31s;Show all the unlocked special cards;no;$var[HOLA];]
