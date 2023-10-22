@@ -1,0 +1,39 @@
+$nomention $reply $ignoreTriggerCase
+$description[# ☁️ CREDITS ☁️
+Bot coded by Inwydix using Bot Designer For Discord.
+### Special thanks to Nanashi and Kiri-chan! 🤍
+And special thanks for you, who plays with the bot~
+## Profile Pictures
+Honkai Impact 3rd
+\[Julia |Yui Shi| Zhilyaeva%ESCAPED%(https://yuishi.artstation.com/projects/mqqaW8)
+## Profile Frames
+\[Tangantangen_studio%ESCAPED%(https://es.pngtree.com/freepng/halloween-frame-border_6933690.html?sol=downref&id=bef)
+## Icons
+Honkai Impact 3rd wiki
+## Card Frame Edits
+Inwydix
+## Pixel HOMU Family
+\[Cat Planet%ESCAPED%(https://jpegurl.tumblr.com/post/673782349326073856/some-small-homu-family-icons-100)
+;1]
+$description[# ☁️ Set 1 Cards ☁️
+\[Card1%ESCAPED%(<https://twitter.com/iwis0/status/1661034589924491265>) \[Card2%ESCAPED%(<https://www.pixiv.net/artworks/104850338>) \[Card3%ESCAPED%(<https://www.pixiv.net/artworks/70390605>) \[Card4%ESCAPED%(<https://www.pixiv.net/artworks/75501413>) \[Card5%ESCAPED%(<https://www.pixiv.net/artworks/80989509>) \[Card6%ESCAPED%(<https://honkai.lofter.com/post/1ff23f93_12c231988>) \[Card7%ESCAPED%(<https://twitter.com/soha_ez/status/1070693380273823745>) \[Card8%ESCAPED%(<https://danbooru.donmai.us/posts/5273285?q=seele_vollerei_%28swallowtail_phantasm%29>) \[Card9%ESCAPED%(<https://danbooru.donmai.us/posts/5144993?q=otto_apocalypse+>) \[Card10%ESCAPED%(<https://www.pixiv.net/artworks/84490529>) \[Card11%ESCAPED%(<https://www.pixiv.net/artworks/91200358>) \[Card12%ESCAPED%(<https://www.pixiv.net/artworks/97591860>) \[Card13%ESCAPED%(<https://www.pixiv.net/artworks/63247367>) \[Card14%ESCAPED%(<https://twitter.com/DeltaFervent/status/1521351030755233792>) \[Card15%ESCAPED%(<https://www.pixiv.net/artworks/73572009>) \[Card16%ESCAPED%(<https://www.pixiv.net/artworks/75050145>) \[Card17%ESCAPED%(<https://www.pixiv.net/artworks/73524142>) \[Card18%ESCAPED%(<https://www.pixiv.net/artworks/86226643>) \[Card19%ESCAPED%(<https://www.pixiv.net/artworks/78914876>) \[Card20%ESCAPED%(<https://ababababaaa.lofter.com/post/4b6bbf64_2b4df449e>) \[Card21%ESCAPED%(<https://www.pixiv.net/artworks/61215922>) \[Card22%ESCAPED%(<https://www.pixiv.net/artworks/63445873>) \[Card23%ESCAPED%(<https://danbooru.donmai.us/posts/4346966?q=bronya_zaychik_%28drive_kometa%29+>) \[Card24%ESCAPED%(<https://www.pixiv.net/artworks/110200609>) \[Card25%ESCAPED%(<https://www.pixiv.net/artworks/90500483>) \[Card26%ESCAPED%(<https://www.pixiv.net/artworks/88469390>) \[Card27%ESCAPED%(<https://twitter.com/taichi_yirkorn/status/1522831246350372864>) \[Card28%ESCAPED%(<https://www.pixiv.net/artworks/95690038>) \[Card29%ESCAPED%(<https://twitter.com/misone_1231/status/1687864605950042112>) \[Card30%ESCAPED%(<https://danbooru.donmai.us/posts/5904599?q=bianka_durandal_ataegina_%28bright_knight%3A_excelsis%29+>) \[Card31%ESCAPED%(<https://twitter.com/seilidare/status/1675986990095904772>) \[Card32%ESCAPED%(<https://twitter.com/guruguru_7suB/status/1389960853793873920>)
+;2]
+$description[# ☁️ Nostalgia Set Edits ☁️
+Nanashi;3]
+$if[$getUserVar[theme]==HOMU]
+$color[#f3b816;1]
+$color[#f3b816;2]
+$color[#f3b816;3]
+$elseif[$getUserVar[theme]==HOLI]
+$color[#608dc8;1]
+$color[#608dc8;2]
+$color[#608dc8;3]
+$elseif[$getUserVar[theme]==HOMEI]
+$color[#f093a8;1]
+$color[#f093a8;2]
+$color[#f093a8;3]
+$elseif[$getUserVar[theme]==HOLA]
+$color[#a81309;1]
+$color[#a81309;2]
+$color[#a81309;3]
+$endif
