@@ -1,0 +1,55 @@
+$nomention 
+$onlyIf[$getUserVar[banned]==false;]
+$var[nope;<:HOWOSad:1155144446682333185>]
+$onlyIf[$getUserVar[level]>=30;$var[nope] You don't have enough level to do this...]
+$removeComponent[smRankup1]
+
+$if[$message!=nothing]
+
+$jsonParse[$getUserVar[cards]]
+
+$title[RANK UP]
+
+$if[$getUserVar[theme]==HOMU]
+$color[#f3b816]
+$elseif[$getUserVar[theme]==HOLI]
+$color[#608dc8]
+$elseif[$getUserVar[theme]==HOMEI]
+$color[#f093a8]
+$elseif[$getUserVar[theme]==HOLA]
+$color[#a81309]
+$endif
+
+$if[$and[$message<=10;$json[hi31;$message;rank]==c]]
+
+$onlyIf[$getUserVar[coin]>=5000;$var[nope] You don't have enough coins! ($numberSeparator[$getUserVar[coin];,]/5,000)]
+$onlyIf[$getUserVar[mats]>=1000;$var[nope] You don't have enough materials ($numberSeparator[$getUserVar[mats];,]/1,000)]
+
+$setUserVar[coin;$sub[$getUserVar[coin];5000]]
+$setUserVar[mats;$sub[$getUserVar[mats];1000]]
+
+$jsonSet[hi31;$message;rank;r]
+
+$description[Card #$message rank up!
+**Common → Rare**]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card$message.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;$message;rank].png]
+
+$setUserVar[cards;$jsonStringify]
+
+$else
+
+$onlyIf[$getUserVar[coin]>=10000;$var[nope] You don't have enough coins! ($numberSeparator[$getUserVar[coin];,]/10,000)]
+$onlyIf[$getUserVar[mats]>=3000;$var[nope] You don't have enough materials ($numberSeparator[$getUserVar[mats];,]/3,000)]
+
+$setUserVar[coin;$sub[$getUserVar[coin];10000]]
+$setUserVar[mats;$sub[$getUserVar[mats];3000]]
+
+$jsonSet[hi31;$message;rank;u]
+
+$description[Card #$message rank up!
+**Rare → Ultra Rare**]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card$message.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;$message;rank].png]
+
+$setUserVar[cards;$jsonStringify]
+
+$endif
