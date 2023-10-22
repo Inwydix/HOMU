@@ -6,4 +6,4 @@
 ### `?todo remove <item-number/all>` 
 > Remove the item with the chosen number from your to-do list. Do `?todo remove all` to remove all items.
 ## 📦 Variable 📦
-It saves all in a single variable called `todo`. It's initial value is just a bunch of `/` (so something like `/////////////////////////////`, with 30 spaces for the split-texts to not return an error)
+It saves all in a single variable called `todo`. It's initial value is just a bunch of `/` (so something like `/////////////////////////////`)
