@@ -1,0 +1,184 @@
+$c[?cards select menu $onInteraction]
+
+$nomention
+$onlyIf[$getUserVar[banned]==false;]
+
+$jsonParse[$getUserVar[cards]]
+
+$if[$message==hi31c]
+
+$title[$if[$json[hi31;1;lock]==f]🔒 $endifHI3rd Beginnings - Card #1;1]
+$if[$json[hi31;1;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card1.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;1;rank].png;1]
+$endif
+$title[$if[$json[hi31;2;lock]==f]🔒 $endifHI3rd Beginnings - Card #2;2]
+$if[$json[hi31;2;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card2.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;2;rank].png;2]
+$endif
+$title[$if[$json[hi31;3;lock]==f]🔒 $endifHI3rd Beginnings - Card #3;3]
+$if[$json[hi31;3;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card3.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;3;rank].png;3]
+$endif
+$title[$if[$json[hi31;4;lock]==f]🔒 $endifHI3rd Beginnings - Card #4;4]
+$if[$json[hi31;4;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card4.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;4;rank].png;4]
+$endif
+$title[$if[$json[hi31;5;lock]==f]🔒 $endifHI3rd Beginnings - Card #5;5]
+$if[$json[hi31;5;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card5.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;5;rank].png;5]
+$endif
+$title[$if[$json[hi31;6;lock]==f]🔒 $endifHI3rd Beginnings - Card #6;6]
+$if[$json[hi31;6;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card6.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;6;rank].png;6]
+$endif
+$title[$if[$json[hi31;7;lock]==f]🔒 $endifHI3rd Beginnings - Card #7;7]
+$if[$json[hi31;7;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card7.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;7;rank].png;7]
+$endif
+$title[$if[$json[hi31;8;lock]==f]🔒 $endifHI3rd Beginnings - Card #8;8]
+$if[$json[hi31;8;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card8.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;8;rank].png;8]
+$endif
+$title[$if[$json[hi31;9;lock]==f]🔒 $endifHI3rd Beginnings - Card #9;9]
+$if[$json[hi31;9;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card9.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;9;rank].png;9]
+$endif
+$title[$if[$json[hi31;10;lock]==f]🔒 $endifHI3rd Beginnings - Card #10;10]
+$if[$json[hi31;10;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card10.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;10;rank].png;10]
+$endif
+
+$color[#f3b816;1]
+$color[#f3b816;2]
+$color[#f3b816;3]
+$color[#f3b816;4]
+$color[#f3b816;5]
+$color[#f3b816;6]
+$color[#f3b816;7]
+$color[#f3b816;8]
+$color[#f3b816;9]
+$color[#f3b816;10]
+
+$elseif[$message==hi31r]
+
+$title[$if[$json[hi31;11;lock]==f]🔒 $endifHI3rd Beginnings - Card #11;1]
+$if[$json[hi31;11;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card11.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;11;rank].png;1]
+$endif
+$title[$if[$json[hi31;12;lock]==f]🔒 $endifHI3rd Beginnings - Card #12;2]
+$if[$json[hi31;12;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card12.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;12;rank].png;2]
+$endif
+$title[$if[$json[hi31;13;lock]==f]🔒 $endifHI3rd Beginnings - Card #13;3]
+$if[$json[hi31;13;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card13.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;13;rank].png;3]
+$endif
+$title[$if[$json[hi31;14;lock]==f]🔒 $endifHI3rd Beginnings - Card #14;4]
+$if[$json[hi31;14;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card14.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;14;rank].png;4]
+$endif
+$title[$if[$json[hi31;15;lock]==f]🔒 $endifHI3rd Beginnings - Card #15;5]
+$if[$json[hi31;15;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card15.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;15;rank].png;5]
+$endif
+$title[$if[$json[hi31;16;lock]==f]🔒 $endifHI3rd Beginnings - Card #16;6]
+$if[$json[hi31;16;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card16.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;16;rank].png;6]
+$endif
+$title[$if[$json[hi31;17;lock]==f]🔒 $endifHI3rd Beginnings - Card #17;7]
+$if[$json[hi31;17;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card17.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;17;rank].png;7]
+$endif
+$title[$if[$json[hi31;18;lock]==f]🔒 $endifHI3rd Beginnings - Card #18;8]
+$if[$json[hi31;18;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card18.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;18;rank].png;8]
+$endif
+$title[$if[$json[hi31;19;lock]==f]🔒 $endifHI3rd Beginnings - Card #19;9]
+$if[$json[hi31;19;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card19.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;19;rank].png;9]
+$endif
+$title[$if[$json[hi31;20;lock]==f]🔒 $endifHI3rd Beginnings - Card #20;10]
+$if[$json[hi31;20;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card20.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;20;rank].png;10]
+$endif
+
+$color[#f093a8;1]
+$color[#f093a8;2]
+$color[#f093a8;3]
+$color[#f093a8;4]
+$color[#f093a8;5]
+$color[#f093a8;6]
+$color[#f093a8;7]
+$color[#f093a8;8]
+$color[#f093a8;9]
+$color[#f093a8;10]
+
+$elseif[$message==hi31u]
+
+$title[$if[$json[hi31;21;lock]==f]🔒 $endifHI3rd Beginnings - Card #21;1]
+$if[$json[hi31;21;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card21.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;21;rank].png;1]
+$endif
+$title[$if[$json[hi31;22;lock]==f]🔒 $endifHI3rd Beginnings - Card #22;2]
+$if[$json[hi31;22;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card22.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;22;rank].png;2]
+$endif
+$title[$if[$json[hi31;23;lock]==f]🔒 $endifHI3rd Beginnings - Card #23;3]
+$if[$json[hi31;23;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card23.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;23;rank].png;3]
+$endif
+$title[$if[$json[hi31;24;lock]==f]🔒 $endifHI3rd Beginnings - Card #24;4]
+$if[$json[hi31;24;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card24.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;24;rank].png;4]
+$endif
+$title[$if[$json[hi31;25;lock]==f]🔒 $endifHI3rd Beginnings - Card #25;5]
+$if[$json[hi31;25;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card25.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;25;rank].png;5]
+$endif
+$title[$if[$json[hi31;26;lock]==f]🔒 $endifHI3rd Beginnings - Card #26;6]
+$if[$json[hi31;26;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card26.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;26;rank].png;6]
+$endif
+$title[$if[$json[hi31;27;lock]==f]🔒 $endifHI3rd Beginnings - Card #27;7]
+$if[$json[hi31;27;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card27.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;27;rank].png;7]
+$endif
+$title[$if[$json[hi31;28;lock]==f]🔒 $endifHI3rd Beginnings - Card #28;8]
+$if[$json[hi31;28;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card28.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;28;rank].png;8]
+$endif
+$title[$if[$json[hi31;29;lock]==f]🔒 $endifHI3rd Beginnings - Card #29;9]
+$if[$json[hi31;29;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card29.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;29;rank].png;9]
+$endif
+$title[$if[$json[hi31;30;lock]==f]🔒 $endifHI3rd Beginnings - Card #30;10]
+$if[$json[hi31;30;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card30.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;30;rank].png;10]
+$endif
+
+$color[#608dc8;1]
+$color[#608dc8;2]
+$color[#608dc8;3]
+$color[#608dc8;4]
+$color[#608dc8;5]
+$color[#608dc8;6]
+$color[#608dc8;7]
+$color[#608dc8;8]
+$color[#608dc8;9]
+$color[#608dc8;10]
+
+$else
+
+$title[$if[$json[hi31;31;lock]==f]🔒 $endifHI3rd Beginnings - Card #31;1]
+$if[$json[hi31;31;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card31.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;31;rank].png;1]
+$endif
+$title[$if[$json[hi31;32;lock]==f]🔒 $endifHI3rd Beginnings - Card #32;2]
+$if[$json[hi31;32;lock]==t]
+$image[https://ragooffo.sirv.com/Cards/hi31/Card32.png?watermark.0.image=%2FCards%2FFrames%2F$json[hi31;32;rank].png;2]
+$endif
+
+$color[#a81309;1]
+$color[#a81309;2]
+
+$endif
