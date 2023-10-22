@@ -1,3 +1,5 @@
+$c[?rank up $onInteraction]
+
 $nomention 
 $onlyIf[$getUserVar[banned]==false;]
 $var[nope;<:HOWOSad:1155144446682333185>]
