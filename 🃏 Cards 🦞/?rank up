@@ -1,0 +1,111 @@
+$c[Show the cards you can rank up (only if you are level 30+)]
+
+$nomention $reply $ignoreTriggerCase
+$onlyIf[$getUserVar[banned]==false;]
+$var[nope;<:HOWOSad:1155144446682333185>]
+$onlyIf[$getUserVar[level]>=30;$var[nope] You don't have enough level to do this...]
+
+$var[card1;<:Card1:1160617856468267128>]
+$var[card2;<:Card2:1160618195284148284>]
+$var[card3;<:Card3:1160618859179556884>]
+$var[card4;<:Card4:1160619505060421652>]
+$var[card5;<:Card5:1160620852728057927>]
+$var[card6;<:Card6:1160619748330062004>]
+$var[card7;<:Card7:1160619941045735605>]
+$var[card8;<:Card8:1160620200484413490>]
+$var[card9;<:Card9:1160620444941045880>]
+$var[card10;<:Card10:1160620791675760751>]
+$var[card11;<:Card11:1160617956280111124>]
+$var[card12;<:Card12:1160618412121272371>]
+$var[card13;<:Card13:1160618931061538816>]
+$var[card14;<:Card14:1160619599411290132>]
+$var[card15;<:Card15:1160620908717818040>]
+$var[card16;<:Card16:1160619801362829343>]
+$var[card17;<:Card17:1160620010063011900>]
+$var[card18;<:Card18:1160620271963746324>]
+$var[card19;<:Card19:1160620498321932329>]
+$var[card20;<:Card20:1160620709807136788>]
+
+
+$title[RANK UP]
+$description[Choose the card you want to rank up using the select menu below]
+
+$if[$getUserVar[theme]==HOMU]
+$color[#f3b816]
+$elseif[$getUserVar[theme]==HOLI]
+$color[#608dc8]
+$elseif[$getUserVar[theme]==HOMEI]
+$color[#f093a8]
+$elseif[$getUserVar[theme]==HOLA]
+$color[#a81309]
+$endif
+
+$jsonParse[$getUserVar[cards]]
+$newSelectMenu[smRankup1;1;1;HI3rd Beginnings;]
+
+$c[Set 1 HI3 common]
+$if[$or[$and[$json[hi31;1;pp]>199;$json[hi31;1;rank]==c]==true;$and[$json[hi31;1;pp]>399;$json[hi31;1;rank]==r]==true]]
+$addSelectMenuOption[smRankup1;Card 1;1;Rank up card!;no;$var[card1];]
+$endif
+$if[$or[$and[$json[hi31;2;pp]>199;$json[hi31;2;rank]==c]==true;$and[$json[hi31;2;pp]>399;$json[hi31;2;rank]==r]==true]]
+$addSelectMenuOption[smRankup1;Card 2;2;Rank up card!;no;$var[card2];]
+$endif
+$if[$or[$and[$json[hi31;3;pp]>199;$json[hi31;3;rank]==c]==true;$and[$json[hi31;3;pp]>399;$json[hi31;3;rank]==r]==true]] 
+$addSelectMenuOption[smRankup1;Card 3;3;Rank up card!;no;$var[card3];]
+$endif
+$if[$or[$and[$json[hi31;4;pp]>199;$json[hi31;4;rank]==c]==true;$and[$json[hi31;4;pp]>399;$json[hi31;4;rank]==r]==true]] 
+$addSelectMenuOption[smRankup1;Card 4;4;Rank up card!;no;$var[card4];]
+$endif
+$if[$or[$and[$json[hi31;5;pp]>199;$json[hi31;5;rank]==c]==true;$and[$json[hi31;5;pp]>399;$json[hi31;5;rank]==r]==true]]
+$addSelectMenuOption[smRankup1;Card 5;5;Rank up card!;no;$var[card5];]
+$endif
+$if[$or[$and[$json[hi31;6;pp]>199;$json[hi31;6;rank]==c]==true;$and[$json[hi31;6;pp]>399;$json[hi31;6;rank]==r]==true]]
+$addSelectMenuOption[smRankup1;Card 6;6;Rank up card!;no;$var[card6];]
+$endif
+$if[$or[$and[$json[hi31;7;pp]>199;$json[hi31;7;rank]==c]==true;$and[$json[hi31;7;pp]>399;$json[hi31;7;rank]==r]==true]]
+$addSelectMenuOption[smRankup1;Card 7;7;Rank up card!;no;$var[card7];]
+$endif
+$if[$or[$and[$json[hi31;8;pp]>199;$json[hi31;8;rank]==c]==true;$and[$json[hi31;8;pp]>399;$json[hi31;8;rank]==r]==true]] 
+$addSelectMenuOption[smRankup1;Card 8;8;Rank up card!;no;$var[card8];]
+$endif
+$if[$or[$and[$json[hi31;9;pp]>199;$json[hi31;9;rank]==c]==true;$and[$json[hi31;9;pp]>399;$json[hi31;9;rank]==r]==true]]
+$addSelectMenuOption[smRankup1;Card 9;9;Rank up card!;no;$var[card9];]
+$endif
+$if[$or[$and[$json[hi31;10;pp]>199;$json[hi31;10;rank]==c]==true;$and[$json[hi31;10;pp]>399;$json[hi31;10;rank]==r]==true]]
+$addSelectMenuOption[smRankup1;Card 10;10;Rank up card!;no;$var[card10];]
+$endif
+
+$c[Set 1 HI3 rare]
+$if[$and[$json[hi31;11;pp]>399;$json[hi31;11;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 11;11;Rank up card!;no;$var[card11];]
+$endif
+$if[$and[$json[hi31;12;pp]>399;$json[hi31;12;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 12;12;Rank up card!;no;$var[card12];]
+$endif
+$if[$and[$json[hi31;13;pp]>399;$json[hi31;13;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 13;13;Rank up card!;no;$var[card13];]
+$endif
+$if[$and[$json[hi31;14;pp]>399;$json[hi31;14;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 14;14;Rank up card!;no;$var[card14];]
+$endif
+$if[$and[$json[hi31;15;pp]>399;$json[hi31;15;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 15;15;Rank up card!;no;$var[card15];]
+$endif
+$if[$and[$json[hi31;16;pp]>399;$json[hi31;16;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 16;16;Rank up card!;no;$var[card16];]
+$endif
+$if[$and[$json[hi31;17;pp]>399;$json[hi31;17;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 17;17;Rank up card!;no;$var[card17];]
+$endif
+$if[$and[$json[hi31;18;pp]>399;$json[hi31;18;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 18;18;Rank up card!;no;$var[card18];]
+$endif
+$if[$and[$json[hi31;19;pp]>399;$json[hi31;19;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 19;19;Rank up card!;no;$var[card19];]
+$endif
+$if[$and[$json[hi31;20;pp]>399;$json[hi31;20;rank]==r]] 
+$addSelectMenuOption[smRankup1;Card 20;20;Rank up card!;no;$var[card20];]
+$endif
+
+$addSelectMenuOption[smRankup1;Nothing;nothing;Do nothing;no;❌;]
+
